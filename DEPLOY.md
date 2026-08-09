@@ -18,7 +18,21 @@ git branch -M main
 git remote add origin https://github.com/soursake/portfolio.git
 git push -u origin main
 ```
-The `cd` line moves Terminal into the site folder — that's why it has to come first. If `git` isn't installed, macOS will pop up a prompt to install the Xcode Command Line Tools; accept it, wait for it to finish, then re-run the commands. The `git push` step may open a browser window asking you to sign in to GitHub to authorize — do that once and it'll remember you.
+The `cd` line moves Terminal into the site folder — that's why it has to come first. If `git` isn't installed, macOS will pop up a prompt to install the Xcode Command Line Tools; accept it, wait for it to finish, then re-run the commands.
+
+### If `git push` fails with "Invalid username or token. Password authentication is not supported"
+GitHub stopped accepting your GitHub password for this back in 2021. Easiest fix — install GitHub CLI and let it handle login:
+```
+brew install gh
+gh auth login
+```
+Pick: GitHub.com → HTTPS → "Login with a web browser" → follow the on-screen one-time code, it'll open your browser to confirm. Once that's done, re-run:
+```
+git push -u origin main
+```
+It should go through now — `gh` sets up Git to authenticate automatically from then on.
+
+(No Homebrew? Install it first with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`, then retry the `brew install gh` line above.)
 
 ## 3. Turn on GitHub Pages
 1. Repo → Settings → Pages.
