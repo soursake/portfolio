@@ -4,10 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Restaurant Finance Growth Design — Yvonne Zhang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/project.css">
+<script>
+(function(){
+  try {
+    if (sessionStorage.getItem('yz_site_unlocked') === '1') {
+      document.documentElement.classList.add('unlocked');
+    } else {
+      document.documentElement.classList.add('locked');
+    }
+  } catch(e) { document.documentElement.classList.add('locked'); }
+})();
+</script>
+<link rel="stylesheet" href="../css/gate.css">
 </head>
 <body>
+<div id="gate-overlay">
+  <div class="gate-box">
+    <h1>Yvonne Zhang</h1>
+    <p>This site is currently private. Enter the password to view.</p>
+    <form id="gate-form">
+      <input type="password" id="gate-password" placeholder="Password" autocomplete="off" required>
+      <button type="submit">Enter</button>
+      <div class="gate-error" id="gate-error"></div>
+    </form>
+  </div>
+</div>
+<div id="site-content">
+
 <header class="site-header">
   <a href="../index.html" class="logo">Yvonne Zhang</a>
 </header>
@@ -20,5 +48,7 @@
   <div class="placeholder-note">Placeholder page — replace with your full case study (problem, process, outcome) and additional screenshots from the original Squarespace project page.</div>
 </main>
 <script src="../js/script.js"></script>
+</div>
+<script src="../js/gate.js"></script>
 </body>
 </html>

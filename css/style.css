@@ -4,23 +4,34 @@
   --border: #e5e5e5;
   --max: 1200px;
   --gap: 40px;
+  --serif: "Fraunces", "Times New Roman", Georgia, serif;
+  --sans: "Inter", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--sans);
+  font-weight: 300;
   color: var(--black);
-  line-height: 1.5;
+  line-height: 1.6;
   background: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
 img { max-width: 100%; display: block; }
 
 a { color: inherit; text-decoration: none; }
 
-h2 { font-size: 2.5rem; font-weight: 500; margin: 0 0 40px; }
+h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 40px;
+}
 
 /* Header */
 .site-header {
@@ -30,7 +41,12 @@ h2 { font-size: 2.5rem; font-weight: 500; margin: 0 0 40px; }
   padding: 24px 40px;
   border-bottom: 1px solid var(--border);
 }
-.logo { font-size: 1.1rem; font-weight: 500; }
+.logo {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
 .icon-link { display: flex; }
 
 /* Hero */
@@ -43,9 +59,12 @@ h2 { font-size: 2.5rem; font-weight: 500; margin: 0 0 40px; }
   margin: 0 auto;
 }
 .tagline p {
-  font-size: 2.5rem;
-  font-weight: 500;
-  line-height: 1.25;
+  font-family: var(--serif);
+  font-size: 2.75rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
   margin: 0;
   max-width: 900px;
 }
@@ -60,7 +79,9 @@ h2 { font-size: 2.5rem; font-weight: 500; margin: 0 0 40px; }
   margin: 0 auto;
 }
 .intro-copy p {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.7;
   margin: 0 0 20px;
 }
 
@@ -83,15 +104,28 @@ h2 { font-size: 2.5rem; font-weight: 500; margin: 0 0 40px; }
   border-radius: 4px;
   margin-bottom: 24px;
 }
-.work-card h3 { font-size: 1.5rem; margin: 0 0 6px; font-weight: 500; }
-.work-card .meta { color: var(--gray); margin: 0 0 12px; }
-.work-card p { font-size: 1rem; margin: 0 0 20px; }
+.work-card h3 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0 0 6px;
+}
+.work-card .meta {
+  color: var(--gray);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 14px;
+}
+.work-card p { font-size: 0.98rem; font-weight: 300; line-height: 1.65; margin: 0 0 20px; }
 .btn {
   display: inline-block;
   padding: 10px 20px;
   border: 1px solid var(--black);
   border-radius: 6px;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 .btn-progress, .btn-locked {
   color: var(--gray);
@@ -115,11 +149,23 @@ h2 { font-size: 2.5rem; font-weight: 500; margin: 0 0 40px; }
   align-items: start;
 }
 .about-photo img { width: 100%; height: 100%; object-fit: cover; }
-.about h2 { font-size: 3rem; margin-bottom: 40px; }
-.about h3 { font-size: 1.8rem; font-weight: 500; margin: 0 0 20px; }
-.about-copy p { font-size: 1.1rem; color: #ddd; }
+.about h2 { font-size: 3.2rem; margin-bottom: 40px; }
+.about h3 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+.about-copy p { font-size: 1.05rem; font-weight: 300; line-height: 1.75; color: #ddd; }
 .about-skills ul { list-style: none; padding: 0; margin: 0; }
-.about-skills li { font-size: 1.1rem; margin-bottom: 8px; color: #ddd; }
+.about-skills li {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  margin-bottom: 8px;
+  color: #ddd;
+}
 
 /* Footer */
 .site-footer {
