@@ -39,3 +39,4 @@ python3 -m http.server 8000
 Then open `http://localhost:8000`.
 
 See `DEPLOY.md` for buying the domain and going live on GitHub Pages.
+
